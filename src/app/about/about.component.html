@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <app-header></app-header>
+    <h1>hi am suresh</h1>
+    this is{{title}}<br>
+   <input type="text" (keyup)="updatename($event)">
+   <p>{{name}}</p> 
+   <button [disabled]="isDisable" (click)='isDisable=!isDisable'>clickme</button><br><br>
+    <button *ngIf="!showhide">show</button>
+    <button *ngIf="showhide">hide</button>
+    <p *ngIf="showhide">i am varcas It</p>
+</body>
+</html>

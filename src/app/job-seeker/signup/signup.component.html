@@ -1,0 +1,88 @@
+	<!-- <app-header></app-header> -->
+	<div class="bg-img">
+	<div class="container col-md-6 offset-md-3 pt-5">
+		<div id="second">
+			<div class="myform form">
+				<div class="logo mb-3">
+					<div class="col-md-12 text-center">
+						<h1>Signup</h1>
+					</div>
+				</div>
+				<form action="#" name="registration" [formGroup]="registerForm" (ngSubmit)="collectUser()">
+
+					<label for="fname">First Name<span style="color:red">*</span></label>
+					<input type="text" formControlName="fname" class="form-control" id="firstname"
+						placeholder="Enter Firstname">
+
+					<div *ngIf="isSubmitted && registerForm.controls['fname'].hasError('required')">First Name required
+					</div>
+					<div *ngIf="isSubmitted && registerForm.controls['fname'].hasError('minlength')">First Name must be
+						atleast 5 characters</div>
+					
+					
+
+					<label for="lname">Last Name<span style="color:red">*</span></label>
+					<input type="text" formControlName="lname" class="form-control" id="lastname"
+						placeholder="Enter Lastname">
+					<div *ngIf="isSubmitted && registerForm.controls['lname'].hasError('required')">Last Name required
+					</div>
+					<div *ngIf="isSubmitted && registerForm.controls['lname'].hasError('minlength')">Last Name must be
+						atleast 5 characters</div>
+
+
+					<label for="email">Email address<span style="color:red">*</span></label>
+					<input type="email" formControlName="email" class="form-control" id="email"
+						placeholder="Enter email">
+					
+						<div *ngIf="isSubmitted && registerForm.controls['email'].hasError('required')">email is required
+					</div>
+					<div *ngIf="isSubmitted && registerForm.controls['email'].hasError('required')">email must comtain
+						use atleast one symbol</div>
+				
+					
+						<label for="password">Password<span style="color:red">*</span></label>
+					<input type="password" formControlName="password" class="form-control" placeholder="Enter Password">
+					
+					<div *ngIf="isSubmitted && registerForm.controls['password'].hasError('required')">Password required
+					</div>
+					<div *ngIf="isSubmitted && registerForm.controls['password'].hasError('pattern')">password must be
+						atleast 8 characters</div>
+
+
+
+					<label for="phonenumber">Phone Number<span style="color:red">*</span></label>
+					<input type="text" formControlName="phone" class="form-control" id="phone"
+						placeholder="Enter Phone Number">
+					
+						<div *ngIf="isSubmitted && registerForm.controls['phone'].hasError('required')">Phone number is  required
+						</div>
+						<div *ngIf="isSubmitted && registerForm.controls['phone'].hasError('pattern')">phone number must contain
+							atleast 10 characters</div>
+
+					
+
+					<label for="type">Type<span style="color:red">*</span></label><br>
+					<input type="radio" formControlName="type" value="Salaried">jobholder
+					<input type="radio" formControlName="type" value="Job Seeker">JobSeeker
+
+					<div class="col-md-12 text-center mb-3">
+						<button type="submit" class=" btn btn-block mybtn btn-primary"
+							>REGISTER HERE FOR
+							FREE</button>
+					</div>
+
+					<div class="col-md-12 ">
+						<div class="form-group">
+							<p class="text-center">Already have an account?</p>
+						</div>
+					</div>
+					<div class="col-md-12 ">
+						<div class="form-group">
+							<p class="text-center"><a routerLink="/job-seeker/login" id="signin">Sign in Here</a></p>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

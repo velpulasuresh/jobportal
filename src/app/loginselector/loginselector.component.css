@@ -1,0 +1,123 @@
+.main
+{
+    padding: 10px 15px;
+   
+}
+.main .logo h1{
+font-size: 30px;
+color: #000000;
+font-family:Arial, Helvetica, sans-serif ;
+font-weight: bold;
+}
+.main .logo img{
+    width: 50px;
+    height: 50px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.main { 
+    background-color: aliceblue;
+}
+.img{
+    width: 100%;
+    height: 400px;
+}
+
+.btn
+{
+    font-weight: bold;
+    padding:5px 15px;
+    background: white;
+    transition-property: box-shadow;
+    transition-duration: 0.25s;
+    box-shadow: 5px 5px #0724e3;
+    border: 1px solid black;
+    border-radius: 20px;
+    
+}
+.btn:hover
+{
+    border: none;
+    color: white;
+    box-shadow: none;
+    background-color: black;
+}
+.a{
+    text-align: center;
+    background-image: url(/./assets/bgimage.jpg);
+    height:500px;
+    
+}
+
+
+
+
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(58, 56, 56);
+  }
+  button {
+    text-decoration: none;
+    border: 3px solid yellow;
+    color: transparent;
+    padding: 40px 80px;
+    font-size: 28px;
+    font-family: sans-serif;
+    letter-spacing: 5px;
+    transition: all 0.5s;
+    position: relative;
+  }
+  button:before {
+    content: "recruter Me";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: yellow;
+    background: rgb(34, 34, 34);
+    font-size: 28px;
+    top: 0;
+    left: 100%;
+    font-family: sans-serif;
+    letter-spacing: 5px;
+    transition: all 1s;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform: scale(0) rotatey(0);
+    opacity: 0;
+  }
+  button:hover:before {
+    transform: scale(1) rotatey(360deg);
+    left: 0;
+    opacity: 1;
+  }
+  button:after {
+    content: "Hover Me";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: yellow;
+    background: rgb(34, 34, 34);
+    font-size: 28px;
+    top: 0;
+    left: 0;
+    font-family: sans-serif;
+    letter-spacing: 5px;
+    transition: all 1s;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform: scale(1) rotatey(0);
+    opacity: 1;
+  }
+  button:hover:after {
+    transform: scale(0) rotatey(360deg);
+    left: -100%;
+    opacity: 0;
+  }
+   */

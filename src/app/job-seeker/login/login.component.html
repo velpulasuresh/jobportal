@@ -1,0 +1,112 @@
+<!-- <app-header></app-header> -->
+<div class="a">
+	<div class="row">
+		<div class="col-sm-4">
+			<div class="container col-md- offset-md-2 pt-5">
+				<h1>SOLUTIONS</h1>
+				<p>500 Terry jobs Portal<br>
+
+					San jobsco, CA 94158</p>
+				<p>Tel: 6301556042<br>
+
+					Fax: 123-456-7890</p>
+				<p>info@mysite.com</p>
+				<p>© 2023 by Personal Posted Jobs.<br> Proudly created with Wix.com</p>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="container col-md- offset-md-6 pt-5">
+
+				<div class="myform">
+					<form action="" method="post" name="login" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+						<div class="form-group">
+							<label for="exampleInputEmail1" class="form-label">Email address</label>
+							<input type="email" name="loginEmail" class="form-control" placeholder="Enter email"
+								formControlName="loginEmail" [ngClass]="{'fieldInvalid':'(minlength)||(required)'}">
+						</div>
+						<div
+							[hidden]="loginForm.controls['loginEmail'].untouched || loginForm.controls['loginEmail'].valid">
+							<div *ngIf="loginForm.controls['loginEmail'].hasError('required')" class="text-danger">
+								Email required</div>
+							<div *ngIf="loginForm.controls['loginEmail'].hasError('email')" class="text-danger">
+								Email must be in email format</div>
+						</div>
+						<div *ngIf="isSubmitted" class="alert alert-success alert-dismissible fade show" role="alert">
+							<strong>Success!</strong> You Login has been succcesful!.
+							<button (click)="closeAlert()" type="button" class="btn-close" data-bs-dismiss="alert"
+								aria-label="Close"></button>
+						</div>
+
+
+
+						<div class="form-group">
+							<label for="exampleInputEmail1" class="form-label">Password</label>
+							<input type="password" name="loginPass" class="form-control" placeholder="Enter Password"
+								formControlName="loginPass" [ngClass]="{'fieldInvalid':'(pattern)||(required)'}">
+						</div>
+						<div
+							[hidden]="loginForm.controls['loginEmail'].untouched || loginForm.controls['loginEmail'].valid">
+							<div *ngIf="loginForm.controls['loginPass'].hasError('required')" class="text-danger">
+								Password required</div>
+
+
+							<div *ngIf="isSubmitted2" class="alert alert-danger alert-dismissible fade show"
+								role="alert">
+								<strong>Failed!</strong> You have not Registered!.
+								<button (click)="closeAlert2()" type="button" class="btn-close" data-bs-dismiss="alert"
+									aria-label="Close"></button>
+							</div>
+						</div>&nbsp;
+
+
+
+
+
+						<div class="col-md-12 text-center">
+							<button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Login</button>
+						</div>
+
+						<div class="col-md-12 ">
+							<div class="login-or">
+								<hr class="hr-or">
+								<span class="span-or">or</span>
+							</div>
+						</div>
+						<div class="form-group">
+							<p class="text-center">Don't have account? <a routerLink="/job-seeker/signup" id="signup">Sign up
+									here</a></p>
+						</div>
+
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>&nbsp;
+<div class="numbers">
+	<div class="aa">
+		<h1>We’re Good with Jobs</h1>
+	</div>
+	<div class="ba">
+		<div class="b">
+			<h1>15</h1>
+			<p>Years of Experience</p>
+		</div>
+		<div class="ba">
+			<div class="b">
+				<h1>36</h1>
+				<p>Years of Experience</p>
+			</div>
+		</div>
+		<div class="b">
+			<h1>120</h1>
+			<p>Clients Every Year</p>
+		</div>
+		<div class="b">
+			<h1>9</h1>
+			<p>Intl. Partners</p>
+		</div>
+	</div>
+</div>

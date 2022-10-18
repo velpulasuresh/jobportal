@@ -1,0 +1,29 @@
+{
+  "registerDetails": [
+    {
+      "fname": "itsol",
+      "lname": "hyderabad",
+      "email": "itsolution@gmail.com",
+      "password": "suresh12@A",
+      "phone": "9876543210",
+      "id": 2
+    },
+    {
+      "fname": "suresh",
+      "lname": "hyder",
+      "email": "suresh12@gmail.com",
+      "password": "suresh@12A",
+      "phone": "09959204190",
+      "id": 3
+    }
+  ],
+  "jobData": [
+    {
+      "jobtitle": "Web Developer Required",
+      "joblocation": "Hyderabad",
+      "jdesc": "Web Developing Skills with Angukar based Framework",
+      "skills": "Angular Js, Html , Css",
+      "id": 1
+    }
+  ]
+}

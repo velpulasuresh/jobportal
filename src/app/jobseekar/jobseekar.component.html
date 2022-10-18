@@ -1,0 +1,142 @@
+<!-- <div class="box">
+  <h2>Personal Details Form</h2>
+  <form>
+    <div class="form-group inputBox">
+      <input type="text" class="form-control" [validators, required]="">
+      <label>Name</label>
+    </div>
+
+    <div class="form-group inputBox">
+      <input type="text" class="form-control"[validators, required]="">
+      <label>Email</label>
+    </div>
+
+    <div class="form-group inputBox">
+      <input type="text" class="form-control"[validators, required]="">
+      <label>Phone</label>
+    </div>
+
+    <div class="form-group inputBox">
+      <label for="">Gender</label>
+      <input type="radio" class="form-control" name="gender">male
+      <input type="radio" class="form-control" name="gender">female
+    </div>
+
+    <div class="form-group inputBox">
+      <input type="date" name="date" placeholder="d/m/y">
+      <label>Dob</label>
+    </div>
+
+    <div class="form-group inputBox">
+      <input type="text" class="form-control" placeholder="pincode">
+      <label>Pincode</label>
+    </div>
+
+    <div class="form-group inputBox">
+      <input type="text" class="form-control" required="">
+      <label>Area</label>
+    </div>
+
+    <div class="form-group inputBox">
+      <input type="text" class="form-control" required="">
+      <label>locality</label>
+    </div>
+
+    <div class="form-group inputBox">
+      <input type="text" class="form-control" required="">
+      <label>City</label>
+    </div>
+    <input type="submit" name="submit" value="Register">
+  </form>
+</div>
+    <!- social meadia -->
+
+
+
+<app-header></app-header>
+<div class="container col-md-6 offset-md-3 pt-5">
+  <div class="myform">
+    <form [formGroup]="personalDetailsForm" class="form-group jobseeker" (ngSubmit)="onSubmit()">
+
+      <label for="name" class="form-label">Name<span style="color:red">*</span></label>
+      <input type="text" formControlName="name" class="form-control" placeholder="Enter Name"
+        [ngClass]="{'has-error':'(minlength)||(required)'}">
+
+      <div *ngIf="isSubmitted && personalDetailsForm.controls['name'].hasError('required')" class="text-danger">Name
+        required</div>
+      <div *ngIf="isSubmitted && personalDetailsForm.controls['name'].hasError('minlength')" class="text-danger">Name
+        must be atleast 5 characters</div>
+
+      <label for="email" class="form-label">Email<span style="color:red">*</span></label>
+      <input type="email" formControlName="email" class="form-control" placeholder="Enter Email"
+        [ngClass]="{'fieldInvalid':'(email)||(required)'}">
+
+      <div *ngIf="isSubmitted && personalDetailsForm.controls['email'].hasError('required')" class="text-danger">Email
+        required</div>
+      <div *ngIf="isSubmitted && personalDetailsForm.controls['email'].hasError('email')" class="text-danger">Email must
+        be Email Format</div>
+
+      <label for="phone" class="form-label">Phone Number<span style="color:red">*</span></label>
+      <input type="text" formControlName="phone" class="form-control" placeholder="Enter Phone Number"
+        [ngClass]="{'fieldInvalid':'(pattern)||(required)'}">
+      <div *ngIf="isSubmitted && personalDetailsForm.controls['phone'].hasError('required')" class="text-danger">Phone
+        Number required</div>
+      <div *ngIf="isSubmitted && personalDetailsForm.controls['phone'].hasError('pattern')" class="text-danger">Phone
+        Number must be 10 characters</div>
+
+      <br>
+      <label for="gender" class="form-label">Gender<span style="color:red">*</span></label>
+      <input type="radio" formControlName="gender" value="Salaried">Male
+      <input type="radio" formControlName="gender" value="Job Seeker">Female
+
+      <div *ngIf="isSubmitted && personalDetailsForm.controls['gender'].hasError('required')" class="text-danger">Gender
+        required</div>
+
+      <br><br>
+
+      <label for="dob" class="form-label">D.O.B<span style="color:red">*</span></label>
+      <input type="text" ngbDatepicker #d="ngbDatepicker" formControlName="dob" />
+      <button class='btn1' (click)="d.toggle()">Select</button>
+
+      <div *ngIf="isSubmitted && personalDetailsForm.controls['dob'].hasError('required')" class="text-danger">DOB
+        required</div>
+
+      <br><br>
+
+      <label for="pincode" class="form-label">Pincode<span style="color:red">*</span></label>
+      <input type="text" formControlName="pincode" class="form-control" placeholder="Enter Pincode"
+        [ngClass]="{'fieldInvalid':'(pattern) || (required)'}">
+
+      <div *ngIf="isSubmitted && personalDetailsForm.controls['pincode'].hasError('required')" class="text-danger">
+        Pincode required</div>
+      <div *ngIf="isSubmitted && personalDetailsForm.controls['pincode'].hasError('pattern')" class="text-danger">
+        Pincode must be 5 characters</div>
+
+      <label for="exampleFormControlTextarea3">Bio/About</label>
+      <textarea class="form-control" formControlName="bio" id="exampleFormControlTextarea3" rows="7"
+        [ngClass]="{'fieldInvalid':'(minlength)||(required)'}"></textarea>
+
+      <div *ngIf="isSubmitted && personalDetailsForm.controls['bio'].hasError('required')" class="text-danger">Bio
+        required</div>
+      <div *ngIf="isSubmitted && personalDetailsForm.controls['bio'].hasError('minlength')" class="text-danger">Bio must
+        be atleast 25 characters</div>
+
+      <label for="socialmedia">Social Media</label>
+      <div formArrayName="socialmedia">
+        <label for="type">type</label>
+        <div [formGroupName]="i" *ngFor="let social of formControls.controls; let i=index">
+          <input type="text" formControlName="type">
+        </div>
+        <label for="type">url</label>
+        <div [formGroupName]="i" *ngFor="let social of formControls.controls; let i=index">
+          <input type="text" formControlName="url">
+        </div>
+        <button (click)="add()">+</button>
+      </div>
+      <div class="text-center">
+      <button type="submit" class=" btn btn-block mybtn btn-primary ">REGISTER HERE FOR
+        FREE</button>
+      </div>
+    </form>
+  </div>
+</div>

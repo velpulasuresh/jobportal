@@ -1,0 +1,78 @@
+<input type="checkbox" Id="nav-toggle">
+<div class="sidebar">
+    <div class="sidebar-brand">
+        <h2><span class="fa-solid fa-bars">&nbsp;&nbsp;<span class="font">SJ Soft</span></span></h2>
+    </div>
+    <div class="sidebar-menu">
+        <ul>
+            <li>
+                <a (click)="onPostJob()"><span  class="fa-brands fa-octopus-deploy"></span> <span class="font">post a job</span></a>
+            </li>
+            <li>
+                <a (click)="onPostedJob()"><span  class="fa-brands fa-uncharted"></span> <span class="font">posted jobs</span></a>
+            </li>
+            <li>
+                <a (click)="onProfile()"><span  class="fa-brands fa-uncharted"></span> <span class="font">My Profile</span></a>
+            </li>
+            <li>
+                <a><span class="fa-solid fa-message"></span> <span class="font">messages</span></a>
+            </li>
+           
+        </ul>
+    </div>
+</div>
+
+
+<div class="main-content">
+    <header>
+         <h2>
+            <label for="nav-toggle">
+                <span class="fa-solid fa-bars"></span>
+            </label>&nbsp;
+            <span class="font">Dashboard</span>
+        </h2>
+
+        <div class="search-wrapper">
+            <span class="fa fa-search" aria-hidden="true"></span>
+            <input type="search" placeholder="search here" />
+        </div>
+        <div class="user-wrapper">
+            <img src="assets/02.jpg" width="40px" height="40px" alt="">
+            <div>
+                <h4>Suresh</h4>
+                <small>super admin</small>
+            </div>
+        </div>
+        <div class="a">
+            <button class="btn" routerLink="/recruiter/rlogin">LOG OUT</button>
+        </div>
+    </header>
+</div>
+
+
+    <div *ngIf="isPost" class="content">
+        <app-postjob></app-postjob>
+    </div>
+    <div *ngIf="isPosted" class="content2">
+        <app-postedjob></app-postedjob>
+    </div>
+    <div *ngIf="isProfile" class="content2">
+        <app-profile></app-profile>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

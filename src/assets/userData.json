@@ -1,0 +1,50 @@
+{
+  "users": [
+    {
+      "fname": "asdad",
+      "lname": "dsddsf",
+      "email": "ddfsfsf@dsfsdfs",
+      "password": "asdadada@1234",
+      "phone": "9876543210",
+      "type": "Job Seeker",
+      "id": 1
+    },
+    {
+      "fname": "sadadad",
+      "lname": "sadadda",
+      "email": "sdadada@gmail.com",
+      "password": "1234566778",
+      "phone": "9876543210",
+      "type": "Job Seeker",
+      "id": 2
+    },
+    {
+      "fname": "suresh",
+      "lname": "suresh",
+      "email": "itsolution@gmail.com",
+      "password": "suresh12@A",
+      "phone": "9876543210",
+      "type": "Salaried",
+      "id": 3
+    },
+    {
+      "fname": "naveen",
+      "lname": "kumar",
+      "email": "naveen1@gmail.com",
+      "password": "naveen@12A",
+      "phone": "09959204190",
+      "type": "Job Seeker",
+      "id": 4
+    },
+    {
+      "fname": "suresh",
+      "lname": "velpula",
+      "email": "suresh.123@gmail.com",
+      "password": "12334566888",
+      "phone": "09959204190",
+      "type": "Salaried",
+      "id": 5
+    }
+  ],
+  "PersonalDetails": []
+}
